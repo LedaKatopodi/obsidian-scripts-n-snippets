@@ -1,4 +1,4 @@
-# 💎 obsidian-scripts
+# 💎 obsidian-scripts-n-snippets
 
 This repo is a library of scripts and code snippets that help me organize my Obsidian vault better, faster, and cleaner.
 
