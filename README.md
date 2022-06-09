@@ -89,8 +89,8 @@ TABLE WITHOUT ID
 	split(string(celltype-subtype-source-notes), ";")[2] AS Source,
 	split(string(celltype-subtype-source-notes), ";")[3] AS Notes
 FROM #marker
-WHERE split(string(celltype-subtype-source-notes), ";")[0] = "Macrophages"
 FLATTEN celltype-subtype-source-notes
+WHERE split(string(celltype-subtype-source-notes), ";")[0] = "Macrophages"
 GROUP BY celltype-subtype-source-notes
 SORT celltype-subtype-source-notes ASC
 ``` 
