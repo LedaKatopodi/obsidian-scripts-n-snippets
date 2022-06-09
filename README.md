@@ -53,7 +53,7 @@ mm-gene:
 hs-gene:
 common-name:
 celltype:
-subtype-source-notes: 
+celltype-subtype-source-notes: 
 - ";[](https://doi.org/)"
 tumor:
 ---
@@ -84,15 +84,15 @@ Rscript Obsidian.Table_to_Marker_Note.R --INPUTFILE "ImmuneMarkersLeda.tsv"
 ```
 ```dataview
 TABLE WITHOUT ID
-	split(string(subtype-source-notes), ";")[0] AS Sub-type,
+	split(string(celltype-subtype-source-notes), ";")[1] AS Sub-type,
 	rows.file.link AS Markers,
-	split(string(subtype-source-notes), ";")[1] AS Source,
-	split(string(subtype-source-notes), ";")[2] AS Notes
+	split(string(celltype-subtype-source-notes), ";")[2] AS Source,
+	split(string(celltype-subtype-source-notes), ";")[3] AS Notes
 FROM #marker
-WHERE contains(celltype, "Macrophages") = true
-FLATTEN subtype-source-notes
-GROUP BY subtype-source-notes
-SORT subtype-source-notes ASC
+WHERE split(string(celltype-subtype-source-notes), ";")[0] = "Macrophages"
+FLATTEN celltype-subtype-source-notes
+GROUP BY celltype-subtype-source-notes
+SORT celltype-subtype-source-notes ASC
 ``` 
 
 #### 2. Dataview query for organizing notes on papers
