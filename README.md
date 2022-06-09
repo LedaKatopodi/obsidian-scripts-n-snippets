@@ -21,7 +21,7 @@ The R script assumes specific YAML metadata entries and, by extension, specific 
 | Mki67 | KI-67, Ki-67 | Mki67	|		| 	|	Neutrophils	|	Neutrophils	|	[PanglaoDB](https://panglaodb.se/search.html?query=%22MKI67%22&species=2&tumor=0&nonadult=0)|	| | |	TRUE	|
 
 <details>
-<summary>In more detail:</summary>
+<summary>Details on the metadata entries:</summary>
   
 | Input file column | Details |
 | --- | --- |
@@ -40,7 +40,7 @@ The R script assumes specific YAML metadata entries and, by extension, specific 
   
 </details>
 
-Entries with the same name are collapsed under the same note.
+Entries with the same name are collapsed under the same note. If there are multiple entries for the same note, all have to have `update = TRUE` for the note to be updated.
 
 #### Output Note Structure
 
