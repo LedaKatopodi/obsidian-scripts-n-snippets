@@ -33,7 +33,7 @@ The R script assumes specific YAML metadata entries and, by extension, specific 
 | celltype | cell type classification |
 | subtype | cell type sub-type classification |
 | source | markdown-format link leading to the publication or source that reported the celltype and subtype classification |
-| notes | Obsidian link to related Obsidian note, e.g. link to the note dedicated to the source |
+| notes | Obsidian link to related Obsidian note, e.g. link to the notes on corresponding paper |
 | tumor | related tumor type |
 | main-body | text to be written in the note's main body |
 | update | binary, whether to update the note inside the obsidian vault; if TRUE, existing note will be overwritten |
