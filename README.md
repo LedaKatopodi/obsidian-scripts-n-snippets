@@ -16,9 +16,9 @@ The R script assumes specific YAML metadata entries and, by extension, specific 
 
 | name	| aliases	| mm-gene	|	hs-gene	|	common-name	|	celltype	|	subtype	|	source	|	notes	|	tumor	|	main-body	|	update	|
 |---| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Mki67 | KI-67, Ki-67 | Mki67	|		|		| Monocytes	|	Proliferating	|	[Molgora (2020)](https://doi.org/10.1016/j.cell.2020.07.013)	|	[[Molgora-Cell-2020]]		|	TRUE	|
-| Mki67 | KI-67, Ki-67 | Mki67	|		|	  |	Macrophages	|	Proliferating	|	[Molgora (2020)](https://doi.org/10.1016/j.cell.2020.07.013)	|	[[Molgora-Cell-2020]]		|	TRUE	|
-| Mki67 | KI-67, Ki-67 | Mki67	|		| 	|	Neutrophils	|	Neutrophils	|	[PanglaoDB](https://panglaodb.se/search.html?query=%22MKI67%22&species=2&tumor=0&nonadult=0)|	|		TRUE	|
+| Mki67 | KI-67, Ki-67 | Mki67	|		|		| Monocytes	|	Proliferating	|	[Molgora (2020)](https://doi.org/10.1016/j.cell.2020.07.013)	|	[[Molgora-Cell-2020]]	 |  |	 |	TRUE	|
+| Mki67 | KI-67, Ki-67 | Mki67	|		|	  |	Macrophages	|	Proliferating	|	[Molgora (2020)](https://doi.org/10.1016/j.cell.2020.07.013)	|	[[Molgora-Cell-2020]]	|  |	|	TRUE	|
+| Mki67 | KI-67, Ki-67 | Mki67	|		| 	|	Neutrophils	|	Neutrophils	|	[PanglaoDB](https://panglaodb.se/search.html?query=%22MKI67%22&species=2&tumor=0&nonadult=0)|	| | |	TRUE	|
 
 <details>
 <summary>In more detail:</summary>
