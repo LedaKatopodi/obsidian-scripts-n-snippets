@@ -82,7 +82,7 @@ Rscript Obsidian.Table_to_Marker_Note.R --INPUTFILE "ImmuneMarkersLeda.tsv"
 #### 1. Dataview query for organizing gene markers into columns based on the celltype/sub-type classification and the respective source
 
 ```
-`` `dataview
+```dataview
 TABLE WITHOUT ID
 	split(string(subtype-source-notes), ";")[0] AS Sub-type,
 	rows.file.link AS Markers,
@@ -93,5 +93,17 @@ WHERE contains(celltype, "Macrophages") = true
 FLATTEN subtype-source-notes
 GROUP BY subtype-source-notes
 SORT subtype-source-notes ASC
-`` `
+``` 
+
+#### 2. Dataview query for organizing notes on papers
+
 ```
+```dataview
+table without ID
+	file.link as Paper, Title, Tags
+from "060 Papers"
+where length(Title) > 0
+sort DateRead desc
+```
+
+
