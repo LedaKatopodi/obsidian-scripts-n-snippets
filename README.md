@@ -75,3 +75,22 @@ Rscript Obsidian.Table_to_Marker_Note.R --INPUTFILE "ImmuneMarkersLeda.tsv"
                                         --OUTPUTDIR "/home/leda/ObsidianVault/030\ Gene\ Cards"
 ```
 
+## 🥐 Code Snippets
+
+### 📑 Dataview Queries
+
+#### 1. Dataview query for organizing gene markers into columns based on the celltype/sub-type classification and the respective source
+
+```dataview
+TABLE WITHOUT ID
+	split(string(subtype-source-notes), ";")[0] AS Sub-type,
+	rows.file.link AS Markers,
+	split(string(subtype-source-notes), ";")[1] AS Source,
+	split(string(subtype-source-notes), ";")[2] AS Notes
+FROM #marker
+WHERE contains(celltype, "Macrophages") = true
+FLATTEN subtype-source-notes
+GROUP BY subtype-source-notes
+SORT subtype-source-notes ASC
+```
+
