@@ -47,7 +47,10 @@ for (pack in ReQ_packages) {
 # --- #
 
 input <- fread(inputfile, data.table = FALSE, header = TRUE, encoding = "Latin-1")
-input$`subtype-source-notes` <- paste0(input$`subtype`, ';', input$`source`, ';', input$`notes`)
+input$`celltype-subtype-source-notes` <- paste0(input$`celltype`, ';', 
+                                                input$`subtype`, ';', 
+                                                input$`source`, ';', 
+                                                input$`notes`)
 
 for (gene in unique(input$`name`)) {
   
@@ -70,8 +73,8 @@ for (gene in unique(input$`name`)) {
                  paste0('common-name: "', unique(tmp$`common-name`), '"'),
                  paste0('celltype:'),
                  paste0('- "', unique(tmp$`celltype`), '"'),
-                 paste0('subtype-source-notes:'),
-                 paste0('- "', inp.test$`subtype-source-notes`, '"'),
+                 paste0('celltype-subtype-source-notes:'),
+                 paste0('- "', tmp$`celltype-subtype-source-notes`, '"'),
                  paste0('tumor: "', paste(unique(tmp$`tumor`), collapse = ";"), '"'),
                  "---",
                  "",
