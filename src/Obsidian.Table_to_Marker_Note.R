@@ -64,7 +64,7 @@ for (gene in unique(input$`name`)) {
     tmp[is.na(tmp$`tumor`), "tumor"] <- ""
     
     print(gene)
-    fileConn<-file(paste0(outputdir, gene, ".md"))
+    fileConn<-file(paste0(outputdir, "/", gene, ".md"))
     
     writeLines(c("---",
                  paste0("aliases: [", paste(unique(tmp$`aliases`), collapse = ", "), "]"),
