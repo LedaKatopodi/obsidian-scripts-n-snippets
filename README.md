@@ -40,7 +40,7 @@ The R script assumes specific YAML metadata entries and, by extension, specific 
   
 </details>
 
-Entries with the same name are collapsed under the same note. If there are multiple entries for the same note, all have to have `update = TRUE` for the note to be updated.
+Entries with the same name are collapsed under the same note. If there are multiple entries for the same note, if there is any entry with `update = TRUE`, then the note will be updated.
 
 #### Output Note Structure
 
