@@ -56,7 +56,7 @@ for (gene in unique(input$`name`)) {
   
   tmp <- input[input$`name` == gene,]
   
-  if (all(tmp$update == TRUE)) {
+  if (any(tmp$update == TRUE)) {
     
     tmp[is.na(tmp$`mm-gene`), "mm-gene"] <- ""
     tmp[is.na(tmp$`hs-gene`), "hs-gene"] <- ""
