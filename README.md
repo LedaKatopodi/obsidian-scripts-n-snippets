@@ -106,4 +106,20 @@ where length(Title) > 0
 sort DateRead desc
 ```
 
+## 🍨 Templates
+
+### 🐚 Obsidian x Zotero Integration
+
+This template, as found [here](./templates/Zotero Integration Template.md), contains the formatting options and code to import paper metadata and PDF annotation from Zotero. It is used by the [Obsidian Zotero Integration](https://github.com/mgmeyers/obsidian-zotero-integration) Obsidian plugin as the default template to create new notes and import the specified metadata and notes.
+
+Obsidian plugin requirements:
+* [Obsidian Zotero Integration](https://github.com/mgmeyers/obsidian-zotero-integration) - the plugin that utilizes this template
+* [Admonition](https://github.com/valentine195/obsidian-admonition) - just for the aesthetics
+
+Zotero plugin requirements:
+* [Better BibTex for Zotero](https://retorque.re/zotero-better-bibtex/) - for proper citation handling, citation key creation to be used for automated note naming, easier metadata handling
+
+The template was inspired by and adjusted from the following posts:
+* [An Academic Workflow: Zotero & Obsidian](https://medium.com/@alexandraphelan/an-academic-workflow-zotero-obsidian-56bf918d51ab)
+* [Zotero Desktop Connector Import Templates?](https://forum.obsidian.md/t/zotero-desktop-connector-import-templates/36310)
 
