@@ -110,7 +110,7 @@ sort DateRead desc
 
 ### 🐚 Obsidian x Zotero Integration
 
-This template, as found [here](templates/Zotero\ Integration\ Template.md), contains the formatting options and code to import paper metadata and PDF annotation from Zotero. It is used by the [Obsidian Zotero Integration](https://github.com/mgmeyers/obsidian-zotero-integration) Obsidian plugin as the default template to create new notes and import the specified metadata and notes.
+This template, as found [here](https://github.com/LedaKatopodi/obsidian-scripts-n-snippets/blob/main/templates/Zotero%20Integration%20Template.md), contains the formatting options and code to import paper metadata and PDF annotation from Zotero. It is used by the [Obsidian Zotero Integration](https://github.com/mgmeyers/obsidian-zotero-integration) Obsidian plugin as the default template to create new notes and import the specified metadata and notes.
 
 Obsidian plugin requirements:
 * [Obsidian Zotero Integration](https://github.com/mgmeyers/obsidian-zotero-integration) - the plugin that utilizes this template
