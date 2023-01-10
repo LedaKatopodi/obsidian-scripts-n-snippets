@@ -1,4 +1,4 @@
-Links: [[000 Vault TOC]], [[060 Papers]]
+Links: [[000 Vault TOC]], [[050 Papers]]
 
 # {{title}}
 
@@ -8,11 +8,11 @@ Links: [[000 Vault TOC]], [[060 Papers]]
 **Title**:: {{title}}
 **Author**:: 
 **Author List**:: {%- for creator in creators %} {{creator.firstName}} {{creator.lastName}}, {%- endfor %}
-<br>**Citekey**:: {{citekey}}
-{%- if DOI %}**DOI**:: {{DOI}} {%- endif %}
+<br>**Citekey**:: {{citekey}}<br>{%- if DOI %}**DOI**:: {{DOI}} {%- endif %}
 **DatePublished**:: {{date | format("YYYY/MM/DD")}}
 **DateRead**:: {{dateAdded | format("YYYY/MM/DD")}}
-{%- if itemType == "journalArticle" %}**Journal**:: _{{publicationTitle}}_{%- endif %}
+{%- if itemType == "journalArticle" %}
+**Journal**:: _{{publicationTitle}}_{%- endif %}
 **Tags**::
 
 
@@ -22,13 +22,13 @@ Links: [[000 Vault TOC]], [[060 Papers]]
 ---
 ## Summary
 
+{% if abstractNote %}
 >[!abstract]
-> {% if abstractNote %}
 > {{abstractNote}}
-> {% endif %}
+{% endif %}
 
 >[!contribution]
-Contribution::
+**Contribution**::
 
 ---
 
@@ -37,36 +37,36 @@ Contribution::
 {%- macro colorValueToName(color) -%}
 	{%- switch color -%}
 		{%- case "#ffd400" -%} 
-			Background information
+			`ris:PenNib` Background
 		{%- case "#ff6666" -%} 
-			Disagree or Questionable points
+			`fas:FrownOpen` Disagree
 		{%- case "#5fb236" -%} 
-			Interesting points 
+			`ris:Flask` Analysis 
 		{%- case "#2ea8e5" -%} 
-			Key conclusions
+			`fas:Star` Important
 		{%- case "#a28ae5" -%} 
-			Nice wording
+			`ris:ChatQuote` Nice Quote
 		{%- endswitch -%} 
 {%- endmacro -%} 
 
 {%- macro calloutHeader(type) -%} 
 	{%- switch type -%} 
 		{%- case "highlight" -%} 
-			Highlight 
+			Highlights 
 		{%- default -%} 
-			Note 
+			Notes 
 	{%- endswitch -%} 
 {%- endmacro %} 
 
 {% persist "annotations" %} 
 {% set annots = annotations | filterby("date", "dateafter", lastImportDate) -%} 
 {% if annots.length > 0 %} 
-> Imported on {{importDate | format("YYYY-MM-DD h:mm a")}} 
+> Imported on {{importDate | format("YYYY/MM/DD h:mm a")}} 
 
-{% for color, annots in annots | groupby("color") -%} 
-### {{colorValueToName(color)}} 
+{% for type, annots in annots | groupby("type") -%} 
+### {{calloutHeader(type)}} 
 {% for annot in annots -%} 
-**_{{calloutHeader(annot.type)}}_** 
+**_{{colorValueToName(annot.color)}}_** 
 {%- if annot.annotatedText %} | {{annot.annotatedText | nl2br}} 
 {%- endif -%} 
 
