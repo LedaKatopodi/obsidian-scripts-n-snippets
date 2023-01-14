@@ -37,15 +37,15 @@ Links: [[000 Vault TOC]], [[050 Papers]]
 {%- macro colorValueToName(color) -%}
 	{%- switch color -%}
 		{%- case "#ffd400" -%} 
-			`ris:PenNib` Background
+			✒️ Background
 		{%- case "#ff6666" -%} 
-			`fas:FrownOpen` Disagree
+			❓ Disagree
 		{%- case "#5fb236" -%} 
-			`ris:Flask` Analysis 
+			🧪 Analysis 
 		{%- case "#2ea8e5" -%} 
-			`fas:Star` Important
+			⭐ Important
 		{%- case "#a28ae5" -%} 
-			`ris:ChatQuote` Nice Quote
+			📑 Nice Quote
 		{%- endswitch -%} 
 {%- endmacro -%} 
 
