@@ -101,7 +101,7 @@ SORT celltype-subtype-source-notes ASC
 ```dataview
 table without ID
 	file.link as Paper, Title, Tags
-from "060 Papers"
+from "050 Papers"
 where length(Title) > 0
 sort DateRead desc
 ```
@@ -114,7 +114,6 @@ This template, as found [here](https://github.com/LedaKatopodi/obsidian-scripts-
 
 Obsidian plugin requirements:
 * [Obsidian Zotero Integration](https://github.com/mgmeyers/obsidian-zotero-integration) - the plugin that utilizes this template
-* [Obsidian Icons Plugin](https://github.com/visini/obsidian-icons-plugin) - just for the aesthetics
 
 Zotero plugin requirements:
 * [Better BibTex for Zotero](https://retorque.re/zotero-better-bibtex/) - for proper citation handling, citation key creation to be used for automated note naming, easier metadata handling
